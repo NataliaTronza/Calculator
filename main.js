@@ -17,8 +17,6 @@ storageEnd.innerText = storageNum.max;
 transferStart.innerText = transferNum.min;
 transferEnd.innerText = transferNum.max;
 
-// const mediaQuery = window.matchMedia('(min-width: 950px)');
-// mediaQuery.addListener(setData)
 
 const prices = [
   {
@@ -82,7 +80,7 @@ for (let i = 0; i < radioForms.length; i++) {
   }
 }
 
-// console.log(radioValues)
+
 let screenSize;
 function getScreenSize() {
   if (window.matchMedia("(min-width: 950px)").matches) {
@@ -105,8 +103,6 @@ getScreenSize();
 window.addEventListener('resize', (e) => {
   getScreenSize();
 });
-
-// const screenSize = getScreenSize()
 
 const finalCost = []
 let storageResult = [0, 0, 0, 0];
@@ -149,25 +145,16 @@ function countStoragePrice(elem, value, i) {
           if (newValue < 0) {
             newValue = 0
           }
-          // console.log(newValue)
-          // if (value <= elem.storagePrice[key].freeLimit) {
-          //   price = 0
-          // } else {
-          //   price = elem.storagePrice[key].price
-          // }
         } else {
           price = elem.storagePrice[key]
         }
 
       }
     }
-    // totalPrice = price*value;
   } else {
     price = elem.storagePrice;
-    // totalPrice = elem.storagePrice*value;
   }
   const totalPrice = price * newValue;
-  // console.log("totalPrice:",totalPrice)
   return totalPrice
 }
 
@@ -181,11 +168,6 @@ function countTransferPrice(elem, value) {
     if (newValue < 0) {
       newValue = 0
     }
-    // if (value <= elem.transferPrice.freeLimit) {
-    //   price = 0
-    // } else {
-    //   price = elem.transferPrice.price
-    // }
   } else {
     price = elem.transferPrice;
   }
@@ -217,12 +199,11 @@ function setData(price, elems) {
     // elems[i].style.width = `${price[i] * 5}px`;
     if (screenSize === 'desktop') {
       elems[i].style.width = `${price[i] * 5}px`;
-      /* the viewport is at least 400 pixels wide */
-      console.log('950 and more')
+      /* the viewport is at least 950 pixels wide */
     } else {
       elems[i].style.height = `${price[i] * 5}px`;
       console.log('950 and less')
-      /* the viewport is less than 400 pixels wide */
+      /* the viewport is less than 950 pixels wide */
     }
     costs[i].innerText = price[i].toFixed(2) + '$';
   }
@@ -234,12 +215,6 @@ function setData(price, elems) {
       elems[i].style.backgroundColor = 'grey';
     }
   }
-  // elems[min].style.backgroundColor = 'blue';
-  // const newElems = elems.filter((elem, i) => i !== min);
-  // console.log(newElems)
-  // for (let i = 0; i < newElems.lenght; i++) {
-
-  // }
 }
 
 function isChecked(arr) {
