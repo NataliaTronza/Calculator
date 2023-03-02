@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div class="range-block">
+        <div class="range-wrapper">
+          <h3 class="range-title">Storage: <span id="storage">0</span><span>GB</span></h3>
+          <div class="input-wrapper">
+            <input class="range" id="storageNum" type="range" min="0" max="1000" value="0">
+            <div class="range-num" id="storageStart"></div>
+            <div class="range-num" id="storageEnd"></div>
+          </div>
+        </div>
+        <div class="range-wrapper">
+          <h3 class="range-title">Transfer: <span id="transfer">0</span><span>GB</span></h3>
+          <div class="input-wrapper">
+            <input class="range" id="transferNum" type="range" min="0" max="1000" value="0">
+            <div class="range-num" id="transferStart"></div>
+            <div class="range-num" id="transferEnd"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scale-block">
+        <div class="company-wrapper">
+          <div class="company">
+            <div class="name-wrapper">
+              <p>backlaze</p>
+              <img src="./img/backblaze.webp" alt="">
+            </div>
+          </div>
+          <div class="company">
+            <div class="name-wrapper">
+              <p>banny</p>
+              <img src="./img/bunny.svg" alt="">
+            </div>
+            <div class="radio">
+              <input class="radiobtn bunnyRadio" type="radio" id="choice1" name="type1" value="hdd" checked="checked">
+              <label for="choice1">HDD</label>
+
+              <input class="radiobtn bunnyRadio" type="radio" id="choice2" name="type1" value="ssd">
+              <label for="choice2">SSD</label>
+            </div>
+          </div>
+          <div class="company">
+            <div class="name-wrapper">
+              <p>scaleway</p>
+              <img src="./img/scaleway.svg" alt="">
+            </div>
+            <div class="radio">
+              <input class="radiobtn scaleRadio" type="radio" id="choice12" name="type2" value="multi"
+                checked="checked">
+              <label for="choice12">Multi</label>
+
+              <input class="radiobtn scaleRadio" type="radio" id="choice22" name="type2" value="single">
+              <label for="choice22">Single</label>
+            </div>
+          </div>
+          <div class="company">
+            <div class="name-wrapper">
+              <p>vultr</p>
+              <img src="./img/vultr.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="info-wrapper">
+          <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="price"></div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="price"></div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="price"></div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="price"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
