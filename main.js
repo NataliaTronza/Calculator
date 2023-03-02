@@ -202,7 +202,6 @@ function setData(price, elems) {
       /* the viewport is at least 950 pixels wide */
     } else {
       elems[i].style.height = `${price[i] * 5}px`;
-      console.log('950 and less')
       /* the viewport is less than 950 pixels wide */
     }
     costs[i].innerText = price[i].toFixed(2) + '$';
